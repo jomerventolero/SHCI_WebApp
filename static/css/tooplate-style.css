@@ -3,7 +3,7 @@
 Template 2103 Central
 
 http://www.tooplate.com/view/2103-central
-	
+
 */
 
 body {
@@ -12,6 +12,13 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+.imgico {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a:hover,
