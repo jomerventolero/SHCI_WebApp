@@ -2,8 +2,21 @@
 <head>
 <title>S H C I Login</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/tooplate-style.css">
 </head>
 <body>
+    <div id="mainNav">
+            <ul>
+                <li>
+                    <a href={{ url_for('index') }}>Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href={{ url_for('register') }}>Register</a>
+                </li>
+            </ul>
+        </div>
     <div class="loginbox">
     <img src="static/img/avatar.png" class="avatar">
         <h1>Login Here</h1>
