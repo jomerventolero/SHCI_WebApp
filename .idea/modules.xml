@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../FlaskPracticeApp/.idea/FlaskPracticeApp.iml" filepath="$PROJECT_DIR$/../FlaskPracticeApp/.idea/FlaskPracticeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SHCI_WebApp.iml" filepath="$PROJECT_DIR$/.idea/SHCI_WebApp.iml" />
     </modules>
   </component>
