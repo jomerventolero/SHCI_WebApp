@@ -45,6 +45,7 @@
             <header id="header" class="text-center tm-text-gray">
                 <h1>SHCI</h1>
                 <p>SEEDTIME & HARVEST CHURCH INTERNATIONAL</p>
+                <p>Welcome {{ login_user.username }}</p>
             </header>
             <nav class="navbar narbar-light">
                 <a class="navbar-brand tm-text-gray" href="#">
@@ -70,10 +71,7 @@
                             <a class="nav-link tm-text-gray" href="#tm-section-6">Contact</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link tm-text-gray" href={{ url_for('login') }}>Login</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link tm-text-gray" href={{ url_for('register') }}>Register</a>
+                          <a class="nav-link tm-text-gray" href={{ url_for('index') }}>Logout</a>
                         </li>
                     </ul>
                 </div>
