@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    background: url('static/img/pic1.jpg');
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
@@ -109,4 +108,5 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+
 

@@ -1,25 +1,25 @@
 <html>
 <head>
-<title>SHCI Register</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/tooplate-style.css">
+    <title>S H C I Register</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/tooplate-style.css">
 </head>
 <body>
-    <nav class="navbar narbar-light">
+        <div id="mainNav">
+            <ul>
+                <li>
+                    <a href={{ url_for('index') }}>Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href={{ url_for('login') }}>Login</a>
+                </li>
+            </ul>
+        </div>
 
-                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                    <ul class="vertical">
-                        <li >
-                            <a href={{ url_for('index') }}>Home</a>
-                        </li>
-                        <li>
-                          <a href={{ url_for('login') }}>Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
     <div class="loginbox">
-    <img src="static/img/avatar.png" class="avatar">
+        <img src="static/img/avatar.png" class="avatar">
         <p>Register Here</p>
         <form>
             <p>Email</p>
@@ -29,9 +29,7 @@
             <p>Password</p>
             <input type="password" name="pwd" placeholder="Enter Password">
             <input type="submit" name="" value="Register">
-            <!--
-            <a href="#">Lost your password?</a><br>
-            -->
+
         </form>
     </div>
 </body>
