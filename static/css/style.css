@@ -16,6 +16,7 @@ body{
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
+    box-sizing: none;
     padding: 70px 30px;
 }
 
