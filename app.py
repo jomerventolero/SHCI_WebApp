@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_wtf import FlaskForm
@@ -50,7 +50,9 @@ class Profile(db.Model):
     def __repr__(self):
         return "<Entry: %r Name: %r" % self.number, self.name
 
-db.create_all()
+########################
+####   App Routes   ####
+########################
 
 @app.route('/')
 def index():
@@ -63,9 +65,10 @@ def login():
     if request.method == 'POST':
         usr = form.username.data
         pwd = form.password.data
+        session["user"] = usr
         login_user = Profile.query.filter_by(username=usr).first()
         if login_user.password == pwd:
-            return render_template('dashboard', login_user.username)
+            return render_template('dashboard.html', login_user=login_user)
         else:
             return "Wrong password"
     return render_template('login.html', form=form)
@@ -84,8 +87,6 @@ def register():
         db.session.commit()
         return redirect('/')
     return render_template('register.html', form=form)
-
-
 
 
 if __name__ == '__main__':

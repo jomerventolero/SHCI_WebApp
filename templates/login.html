@@ -7,20 +7,27 @@ Login
 
 {% block styles %}
 {{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='signin.css')}}">
+<link rel="stylesheet" href='static/css/signin.css'}}">
 {% endblock %}
 
 {% block content %}
-    <div class="container">
 
+    <div class="sidebar">
+      <a class="active" href="{{ url_for('index') }}">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="content">
+    <div class="container">
+      <h1 style="text-align: center">Seedtime & Harvest Church International</h1>
       <form class="form-signin" method="POST" action="/login">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 style="text-align: center" class="form-signin-heading">Please sign in</h2>
         {{ form.hidden_tag() }}
         {{ wtf.form_field(form.username) }}
         {{ wtf.form_field(form.password) }}
-        {{ wtf.form_field(form.remember) }}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
     </div> <!-- /container -->
+    </div>
 {% endblock %}
